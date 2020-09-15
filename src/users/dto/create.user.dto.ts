@@ -3,14 +3,14 @@ import {
   IsString,
   IsBooleanString,
   MaxLength,
+  IsBoolean,
 } from 'class-validator';
 
 export class CreateUserDto {
   @IsNotEmpty()
   @IsString()
   firstName: string;
-  @IsNotEmpty()
-  @IsString()
+
   @IsNotEmpty()
   @IsString()
   lastName: string;
@@ -24,6 +24,6 @@ export class CreateUserDto {
   password: string;
 
   @IsNotEmpty()
-  @IsString()
+  @IsBoolean()
   isActive: boolean;
 }
